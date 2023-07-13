@@ -12,10 +12,10 @@
         state: latest
         update_cache: yes
 
-    - name: install apache server
+    - name: install packeages using dnf
       dnf:
         name: httpd
-        state: latest
+        state: present
 
     - name: change directory to the html directory
       shell: cd /var/www/html
