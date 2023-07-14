@@ -6,12 +6,6 @@
   become_user: root
 
   tasks:
-    - name: upgrade all ec2 instance
-      dnf:
-        name: "*"
-        state: latest
-        update_cache: yes
-
     - name: install packages using dnf
       dnf:
         name: httpd
