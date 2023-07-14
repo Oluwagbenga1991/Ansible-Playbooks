@@ -6,7 +6,7 @@
   become_user: root
 
   tasks:
-    - name: upgrade ec2 instance
+    - name: upgrade all ec2 instance
       dnf:
         name: "*"
         state: latest
