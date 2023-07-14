@@ -6,10 +6,16 @@
   become_user: root
 
   tasks:
-    - name: install packages using dnf
-      dnf:
+    - name: update ec2 instance
+      yum:
+        name: "*"
+        state: latest
+        update_cache: yes
+
+    - name: install apache server
+      yum:
         name: httpd
-        state: present
+        state: latest
 
     - name: change directory to the html directory
       shell: cd /var/www/html
